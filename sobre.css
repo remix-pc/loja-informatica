@@ -1,0 +1,475 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(26, 26, 26);
+    font-family: 'Roboto';
+     
+}
+
+/* Navegação */ 
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s ;
+    padding: 40px 100px;
+    z-index: 100000;
+    font-family: Arial;
+}
+
+header.sticky { 
+    padding: 25px 100px;  
+    background: #0B1840;
+    box-shadow: 0 7px 7px  black;
+} 
+
+
+
+
+header .logo {
+    position: relative;
+    font-weight: 700;
+    color: #BDBFAA;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.6;
+}
+
+header .logo:hover{
+
+    color:#556773;
+    transition: 0.6s;
+}
+
+
+
+header ul {
+    position: relative;
+    display: flex;
+    justify-content: right;
+    align-items: flex-end;
+}
+
+header ul li {
+    position: relative;
+    list-style: none;
+}
+
+header ul li a {
+    font-size: 20px;
+    position: relative; 
+    margin: 0 15px;
+    text-decoration: none;
+    color: #BDBFAA;
+    letter-spacing: 2px;
+    font-weight: 500px;
+    transition: 0.6s;
+}
+
+header ul li a:hover {
+color: #556773;
+transition: 0.5s;
+}
+
+/*Banner background */
+
+.banner {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(45deg, #084177, #0B1840, #6b7466, #556773);
+    background-size: 300% 300%;
+    animation: colors 15s infinite;
+}
+
+@keyframes colors {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+header.sticky .logo, 
+header.sticky ul li a {
+    
+    color: #BDBFAA;
+}
+
+header.sticky .logo:hover {
+    color: #556773;
+    transition: 0.5s; 
+}
+header.sticky ul li a:hover {
+    color: #556773;
+    transition: 0.5s;
+}
+
+
+/* Apresentação remix */
+
+div {
+    margin-top: 20%;
+    margin-left: 10em;
+}
+
+div > h1 {
+    font-size: 50px;
+    max-width: 520px;
+    text-align: initial;
+    margin: 60px auto;
+    font-family: 'Courier New', Courier, monospace;
+    color: #fff;
+    text-shadow: #000 -3px 3px;
+}
+
+#seta{
+    display: flex;
+    margin-left: 19.5%;
+    margin-top: 55em;
+    width: 50px;
+    height: 50px;
+}
+
+#triade {
+    margin-left: 6em;
+    margin-top: 20em;
+    width: 450px;
+    height: 300px;
+}
+
+h1::after {
+     margin-top: 50em;
+    content: '|';
+    margin-left: 10px;
+    opacity: 1;
+    animation: pisca .7s infinite
+}
+
+@keyframes pisca {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+ 
+}
+
+/*******************************Corpo *************************/
+
+hr {
+   border: 3px solid;
+   border-radius: 2px;
+}
+
+
+/* CONTEUDO COM O SOBRE */
+
+#conteudo > h2 {
+    display: block;
+    color: white;
+    text-align: center;
+ text-decoration: underline;
+ margin-top: 0.5em;
+}
+
+#sobre1 {
+    display: inline-flex;
+}
+
+#sobre1 > img {
+    position: relative;
+    width: 600px;
+    height: 550px;
+    margin-top: 0.5em;
+    margin-left: 2em;
+    
+}
+
+
+/*************************************************/
+
+/* Caixas com efeito espelho e o conteudo do sobre e imagens ao lado */
+
+
+#box1 {
+    position: relative;
+    width: 380px;
+    height: 410px;
+    align-items: center;
+    display: flex;
+    background: #060c21;
+    margin: 40px;
+    margin-left: 43em;
+}
+
+
+#box1:before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: #fff;
+    z-index: -1;
+}
+
+#box1::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: #fff;
+    z-index: -2;
+    filter: blur(40px);
+}
+
+#box1:before,
+#box1:after{
+    background:linear-gradient(235deg,#00bcd4 , #010615,#4D44D4 )
+}
+
+#box1 #glass1 {
+    position: absolute;
+    width: 60%;
+    height: 100%;
+    margin-bottom: 4.7em;
+    margin-left: 0px;
+    background: rgba(255,255,255,.1);
+    pointer-events: none;
+}
+
+#box1 #content1 {
+    padding: 20px;
+    font-size: 24px;
+    color: #fff;
+    float: left;
+    margin-bottom: 5em;
+    margin-left: 1em;
+}
+
+#sobre2 {
+    display: inline-flex;
+}
+
+#box2 {
+    position: relative;
+    width: 380px;
+    height: 410px;
+    align-items: center;
+    display: flex;
+    background: #060c21;
+    margin: 40px;
+    margin-left: 4em;
+    margin-top: 10em;
+}
+
+
+#box2:before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: #fff;
+    z-index: -1;
+}
+
+#box2::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: #fff;
+    z-index: -2;
+    filter: blur(40px);
+}
+
+#box2:before,
+#box2:after{
+    background:linear-gradient(235deg, #ff005e, #010615, #cb60da)
+}
+
+#box2 #glass2 {
+    position: absolute;
+    width: 60%;
+    height: 100%;
+    margin-bottom: 4.7em;
+    margin-left: 0px;
+    background: rgba(255,255,255,.1);
+    pointer-events: none;
+}
+
+#box2 #content2 {
+    padding: 20px;
+    font-size: 24px;
+    color: #fff;
+    float: left;
+    margin-bottom: 5em;
+    margin-left: 1em;
+}
+
+#sobre2 > img {
+    width: 550px;
+    height: 550px;
+    margin-top: 3.5em;
+    margin-left: 45em;
+}
+
+#sobre3 {
+    display: inline-flex;
+}
+
+#sobre3 > img {
+    height: 300px;
+    width: 300px;
+    margin-top: 6em;
+    margin-left: 6em;
+}
+
+#box3 {
+    position: relative;
+    width: 380px;
+    height: 410px;
+    align-items: center;
+    display: flex;
+    background: #060c21;
+    margin: 40px;
+    margin-left: 55em;
+}
+
+
+#box3:before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: #fff;
+    z-index: -1;
+}
+
+#box3::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: #fff;
+    z-index: -2;
+    filter: blur(40px);
+}
+
+#box3:before,
+#box3:after{
+    background:linear-gradient(235deg, #772aff, #010615, #2196F3);
+}
+
+#box3 #glass3 {
+    position: absolute;
+    width: 60%;
+    height: 100%;
+    margin-bottom: 4.7em;
+    margin-left: 0px;
+    background: rgba(255,255,255,.1);
+    pointer-events: none;
+}
+
+#box3 #content3 {
+    padding: 20px;
+    font-size: 24px;
+    color: #fff;
+    float: left;
+    margin-bottom: 5em;
+    margin-left: 1em;
+}
+
+
+/* Spans para trocar as cores e modificar a decoração das Âncoras */
+
+span > a {
+    text-decoration: none;
+    color: red;
+}
+
+#span2 > a {
+    text-decoration: none;
+    color: rgb(138, 138, 255);
+}
+
+.hr {
+    margin: 0 auto;
+    border: 1px solid;
+    border-radius: 2px;
+    width: 50%;
+ }
+
+/********************************************************/
+
+ /************** RODAPÉ ****************************/
+
+ footer {
+    display: flex;
+    padding: 4px 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:#0B1840;
+    margin-top: 3em;
+    font-size: 15px;
+    color: white;
+}
+
+footer p {
+    margin-top: 19px;
+    margin-left: 1em;
+}
+
+.contato{
+    margin-left: 6em;
+    width: 20px;
+    height: 20px;
+    margin-top: 18px;
+}
+
+ #socialMidia {
+     display: flex;
+    margin-left: 30em;
+}
+
+footer img {
+    margin-left: 2em;
+    width: 50px;
+    height: 50px;
+}

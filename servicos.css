@@ -1,0 +1,383 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(26, 26, 26);
+    font-family: 'Roboto';
+     
+}
+
+/* Navegação */ 
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s ;
+    padding: 40px 100px;
+    z-index: 100000;
+    font-family: Arial;
+}
+
+header.sticky { 
+    padding: 25px 100px;  
+    background: #0B1840;
+    box-shadow: 0 7px 7px  black;
+} 
+
+
+
+
+header .logo {
+    position: relative;
+    font-weight: 700;
+    color: #BDBFAA;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.6;
+}
+
+header .logo:hover{
+
+    color:#556773;
+    transition: 0.6s;
+}
+
+
+
+header ul {
+    position: relative;
+    display: flex;
+    justify-content: right;
+    align-items: flex-end;
+}
+
+header ul li {
+    position: relative;
+    list-style: none;
+}
+
+header ul li a {
+    font-size: 20px;
+    position: relative; 
+    margin: 0 15px;
+    text-decoration: none;
+    color: #BDBFAA;
+    letter-spacing: 2px;
+    font-weight: 500px;
+    transition: 0.6s;
+}
+
+header ul li a:hover {
+color: #556773;
+transition: 0.5s;
+}
+
+/*Banner background */
+
+.banner {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(45deg, #084177, #0B1840, #6b7466, #556773);
+    background-size: 300% 300%;
+    animation: colors 15s infinite;
+}
+
+#servicos {
+    margin-left: 6em;
+    margin-top: 20em;
+    width: 450px;
+    height: 350px;
+}
+
+@keyframes colors {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+header.sticky .logo, 
+header.sticky ul li a {
+    
+    color: #BDBFAA;
+}
+
+header.sticky .logo:hover {
+    color: #556773;
+    transition: 0.5s; 
+}
+header.sticky ul li a:hover {
+    color: #556773;
+    transition: 0.5s;
+}
+
+
+/* Apresentação remix */
+
+div {
+    margin-top: 20%;
+    margin-left: 7em;
+}
+
+div > h1 {
+    font-size: 50px;
+    max-width: 520px;
+    text-align: initial;
+    margin: 60px auto;
+    font-family: 'Courier New', Courier, monospace;
+    color: #fff;
+    text-shadow: #000 -3px 3px;
+}
+
+h1::after {
+     margin-top: 50em;
+    content: '|';
+    margin-left: 10px;
+    opacity: 1;
+    animation: pisca .7s infinite
+}
+
+@keyframes pisca {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+ 
+}
+
+#seta{
+    display: flex;
+    margin-left: 19.5%;
+    margin-top: 55em;
+    width: 50px;
+    height: 50px;
+}
+
+/******************************************Corpo ************************************/
+
+hr {
+   border: 3px solid;
+   border-radius: 2px;
+}
+
+/* CONTEUDO COM CARDS DOS SERVIÇOS */
+
+#conteudo > h2 {
+    display: block;
+    color: white;
+    text-align: center;
+ text-decoration: underline;
+ margin-top: 0.5em;
+
+}
+
+
+/* Começo dos cards */
+
+.container {
+    display: flex;
+    margin-top: 0;
+    margin-left: 14em;
+}
+
+
+
+.card {
+    position: relative;
+    width: 320px;
+    height: 450px;
+    background: #287bff;
+    border-radius:20px;
+    border-bottom-left-radius: 160px;
+    border-bottom-right-radius: 160px;
+    box-shadow: 0 15px 0 #0B1840, inset 0 -15px 0 rgba(255,255,255,0,.25), 0 45px 0 rgba(0,0,0,0.15);
+    overflow: hidden;
+    display: flex;
+    margin-top: 3em;
+}
+
+.card::before{
+    content: '';
+    position: absolute;
+    top: -140px;
+    left: -40%;
+    width: 100%;
+    height: 120%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2));
+    transform: rotate(35deg);
+    pointer-events: none;
+    filter: blur(5px);
+}
+
+/* CORES DE CADA CARD */
+
+.card:nth-child(1){
+    background: linear-gradient(to bottom, #620697, #645bf6);
+}
+
+.card:nth-child(2){
+    background: linear-gradient(to bottom, #2a2eff, #645bf6);
+}
+
+.card:nth-child(3){
+    background: linear-gradient(to bottom, #007d86, #645bf6);
+}
+
+/*******************************/
+
+/* Posicionamento dos Icones e imagens que vão ficar no centro do card */
+
+.icon {
+    position: relative;
+    width: 140px;
+    height: 120px;
+    background: rgb(26, 26, 26);
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    box-shadow: 0 15px 0 #0B1840, inset 0 -15px 0 rgba(255,255,255,0,.25), 0 45px 0 rgba(0,0,0,0.15);
+    overflow: hidden;
+    margin-top: 0em;
+    display: flex;
+    justify-content: center;
+    margin-left: 5.8em;
+}
+
+.icon img {
+    width: 90px;
+    height: 80px;
+}
+
+.icon #frontend {
+    width: 120px;
+    height: 100px;
+}
+
+.icon::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -50px;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border-top-right-radius: 50px;
+}
+/*************************************************/
+
+/* Começo do conteudo dentro dos cards */
+
+.content {
+    padding: 30px;
+    position: absolute;
+    width: 100%;
+    padding-top: 100px;
+    text-align: center;
+    margin-left: 0.3em;
+}
+
+.content h2 {
+    font-size: 30px;
+    color: #fff;
+    margin-bottom: 10px;
+    text-decoration: underline;
+}
+
+.content p {
+    font-size: 16px;
+    color: #fff;
+    line-height: 1.5em;
+}
+
+
+/* Botão selecionar */
+
+
+.content p input {
+    border: none;
+    border-radius: 5px;
+    padding: 7px 35px;
+    cursor: pointer;
+    outline: none;
+    background: #007fff ;
+    color: white;
+    font-size: 18px;
+    box-shadow: 0px 0px 5px 5px #BDBFAA;
+}
+
+
+/* Margins dos Botões de cada Serviço */
+
+#select {
+    margin-top: 2em;
+}
+
+#acessorios {
+    margin-top: 1em;
+}
+
+#hare {
+    margin-top: 2em;
+}
+
+/*******************************************/
+
+/************************RODAPÉ****************/
+
+footer {
+    display: flex;
+    padding: 4px 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:#0B1840;
+    margin-top: 3em;
+    font-size: 15px;
+    color: white;
+}
+
+footer p {
+    margin-top: 19px;
+    margin-left: 1em;
+}
+
+.contato{
+    margin-left: 6em;
+    width: 20px;
+    height: 20px;
+    margin-top: 18px;
+}
+
+ #socialMidia {
+     display: flex;
+    margin-left: 30em;
+}
+
+footer img {
+    margin-left: 2em;
+    width: 50px;
+    height: 50px;
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nomix's TECH</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="shortcut icon" href="logo/402C7097-0A97-48FA-B742-C31D331C4604.png" type="image/x-icon">
+</head>
+<body>
+    
+    <header>
+        <a href="https://github.com/remix-pc" rel="external" target="_blank" class="logo">Nomix's TECH</a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="servicos.html">Serviços</a></li>
+            <li><a href="faq.html">F.A.Q</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </header>
+
+    <section class="banner">
+        <img src="logo/402C7097-0A97-48FA-B742-C31D331C4604.png" alt="Logo Nomix's" id="nomix">
+        <a href="#conteudo1" id="seta"><img src="img/seta pra baixo.gif" alt="Seta para baixo"></a>
+        <div>
+            <h1>Olá, somos a empresa Nomix's TECH e seja Bem-Vindo(a) ao nosso site!</h1>
+        </div>
+    </section>
+    <hr>
+    <main  id="conteudo1">
+            <img src="img/ti.jpg" alt="Ti">
+        
+            <h2>Hoje em dia, a tecnologia está presente em tudo do nosso cotidiano, muitas empresas precisam de computadores, Hardwares e até mesmos sites tanto Front-End quanto Back-End, contratem nossos serviços e não se arrependera!! <br> <br> Venha conhecer a nossa empresa clicando <a href="sobre.html" rel="next">aqui</a></h2>
+    </main>
+    <hr>
+    <main id="conteudo2">
+        <h2>Produtos mais Vendidos</h2>
+        <div id="fileira">
+            <div class="produto">
+                <img src="img-produtos-home/rz04-02950100-r3814.jpg" alt="Razer">
+                <span class="nome">HEADSET RAZER KRAKEN X LITE AUDIO 7.1 PRETO, RZ04-02950100-R381</span>
+                <span class="preco">R$249,89</span>
+            </div>
+            <div class="produto">
+                <img src="img-produtos-home/88298_index_g.jpg" alt="Placa de vídeo">
+                <span class="nome">Placa de Vídeo VGA Asus NVIDIA GeForce GTX 1080 TI GDDR5X 11GB ROG-STRIX-GTX1080TI-O11G-GAMING</span>
+                <span class="preco">R$ 4.318,00</span>
+            </div>
+            <div class="produto">
+                <img src="img-produtos-home/mouse.jpg" alt="Mouse">
+                <span class="nome">MOUSE GAMER LOGITECH G502 HERO K/DA EDTION, RGB, 25600DPI, 11 BOTOES, BRANCO E PRETO, 910-006096</span>
+                <span class="preco">R$279,89</span>
+            </div>
+        </div>
+        <div id="fileira2">
+            <div class="produto">
+                <img src="img-produtos-home/glo-gmmk-com-brn-w.jpg" alt="Teclado">
+                <span class="nome">TECLADO MECANICO GAMER GLORIOUS GMMK, RGB, SWITCH MARROM, BRANCO, GLO-GMMK-COM-BRN-W</span>
+                <span class="preco">R$999,90</span>
+            </div>
+            <div class="produto">
+                <img src="img-produtos-home/i7.jpg" alt="I7">
+                <span class="nome">PROCESSADOR INTEL CORE I7-9800X, 8-CORE, 16-THREADS, 3.8GHZ (4.4GHZ TURBO), CACHE 16.5MB, LGA2066, BX80673I79800X</span>
+                <span class="preco">R$2.899,90</span>
+            </div>
+            <div class="produto">
+                <img src="img-produtos-home/raptor_intel_1650_5601_1_.jpg" alt="Computador Gamer">
+                <span class="nome">COMPUTADOR PICHAU GAMER, INTEL I3-10100F, RADEON RX 550 4GB, 8GB DDR4, SSD 240GB</span>
+                <span class="preco">R$3.385,37</span>
+            </div>
+        </div>
+    </main>
+    
+    
+        
+    
+<footer>
+    <p>&copy; SITE DESENVOLVIDO POR GUILHERME MOREIRA DA SILVA - 1DSB</p>
+    <img src="img-produtos-home/email.png" alt="email" class="contato">
+    <p>gui.moreiradasilva27@gmail.com</p>
+    <img src="img-produtos-home/pngkit_contact-icon-png-transparent_2667944.png" alt="Telefone" class="contato">
+    <p>19 9999-9999</p>
+    <span id="socialMidia">
+        <a href="https://github.com/remix-pc" rel="external" target="_blank"><img src="img-produtos-home/github.png" alt="Github"></a>
+        <img src="logo/Imagem fundo azul.png" alt="Logo">
+    </span>
+</footer>
+   
+       
+   
+   
+   
+   <!---------------------------------------------JAVA SCRIPT-------------------------------------------------------------->
+   
+    
+    
+   <script type="text/javascript">
+
+        // Menu sticky
+   
+    window.addEventListener("scroll", function(){
+        var header = document.querySelector("header");
+        header.classList.toggle("sticky", window.scrollY > 0);
+    })
+
+
+
+    // Máquina de Escrever efeito
+   function typeWriter(elemento) {
+       const textoArray = elemento.innerHTML.split('');
+       elemento.innerHTML = '';
+       textoArray.forEach((letra, i) => {
+           setTimeout(() => elemento.innerHTML += letra, 45 * i)
+           
+       });
+   }
+        const titulo = document.querySelector('h1');
+        typeWriter(titulo);
+
+        //Efeito ao clicar no produto mais vendidos
+
+        const btn = document.querySelector("#fileira")
+
+        btn.addEventListener('click', function(e){
+            e.preventDefault();
+            window.alert("Ops, ocorreu algum erro! Tente novamente mais tarde");
+        });
+
+        const btn2 = document.querySelector("#fileira2")
+
+        btn2.addEventListener('click', function(e){
+            e.preventDefault();
+            window.alert("Ops, ocorreu algum erro! Tente novamente mais tarde");
+        });
+       
+        
+    </script>
+
+  
+
+</body>
+</html>

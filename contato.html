@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nomix's TECH</title>
+    <link rel="stylesheet" href="contato.css">
+    <link rel="shortcut icon" href="logo/402C7097-0A97-48FA-B742-C31D331C4604.png" type="image/x-icon">
+    
+</head>
+<body>
+    
+    <header>
+        <a href="https://github.com/remix-pc" rel="external" target="_blank" class="logo">Nomix's TECH</a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="servicos.html">Serviços</a></li>
+            <li><a href="faq.html">F.A.Q</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </header>
+
+    <section class="banner">
+        <img src="img-faq-contato/512x512.png" alt="Contato" id="contato">
+        <a href="#conteudo" id="seta"><img src="img/seta pra baixo.gif" alt="Seta para baixo"></a>
+        <div>
+            <h1>Gostou de algo? Nos chame!</h1>
+        </div>
+    </section>
+    <hr id="conteudo">
+        <main class="container">
+            <h2>Entre em contato</h2>
+                <div class="row100">
+                    <div class="col">
+                        <div class="inputBox">
+                            <input type="text" name="" required="required">
+                                <span class="text">Nome Completo</span>
+                                <span class="line"></span>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="inputBox">
+                            <input type="text" name="" required="required">
+                                <span class="text">Email</span>
+                                <span class="line"></span>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="inputBox">
+                            <input type="text" name="" required="required">
+                                <span class="text">Telefone</span>
+                                <span class="line"></span>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="inputBox">
+                            <input type="text" name="" required="required">
+                                <span class="text">Serviço que Deseja</span>
+                                <span class="line"></span>
+                        </div>
+                    </div>
+                <div class="row100">
+                    <div class="col">
+                        <input type="submit" value="Enviar" id="enviar">
+                    </div>
+                </div>
+            </div>
+        </main>
+
+    
+        <footer>
+            <p>&copy; SITE DESENVOLVIDO POR GUILHERME MOREIRA DA SILVA - 1DSB</p>
+            <img src="img-produtos-home/email.png" alt="email" class="contato">
+            <p>gui.moreiradasilva27@gmail.com</p>
+            <img src="img-produtos-home/pngkit_contact-icon-png-transparent_2667944.png" alt="Telefone" class="contato">
+            <p>19 9999-9999</p>
+            <span id="socialMidia">
+                <a href="https://github.com/remix-pc" rel="external" target="_blank"><img src="img-produtos-home/github.png" alt="Github"></a>
+                <img src="logo/Imagem fundo azul.png" alt="Logo">
+            </span>
+        </footer>
+
+
+     <!---------------------------------------------JAVA SCRIPT-------------------------------------------------------------->
+
+    <script type="text/javascript">
+
+        // Menu sticky
+   
+    window.addEventListener("scroll", function(){
+        var header = document.querySelector("header");
+        header.classList.toggle("sticky", window.scrollY > 0);
+    })
+
+
+
+    // Máquina de Escrever efeito
+   function typeWriter(elemento) {
+       const textoArray = elemento.innerHTML.split('');
+       elemento.innerHTML = '';
+       textoArray.forEach((letra, i) => {
+           setTimeout(() => elemento.innerHTML += letra, 45 * i)
+           
+       });
+   }
+        const titulo = document.querySelector('h1');
+        typeWriter(titulo);
+
+        //Aviso ao clicar no botão Enviar 
+    
+        const btn = document.querySelector("#enviar");
+        
+        btn.addEventListener("click", function(e){
+
+            e.preventDefault();
+            window.alert("Dados enviados com sucesso! Vamos retornar em breve, fique de olho no email.");
+        });
+            
+            
+    
+
+    </script>
+
+</body>
+</html>
